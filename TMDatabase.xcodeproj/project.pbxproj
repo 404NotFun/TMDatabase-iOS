@@ -10,6 +10,8 @@
 		3CBC0F3E1EA7C26200454B8B /* TMDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBC0F341EA7C26200454B8B /* TMDatabase.framework */; };
 		3CBC0F431EA7C26200454B8B /* TMDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC0F421EA7C26200454B8B /* TMDatabaseTests.swift */; };
 		3CBC0F451EA7C26200454B8B /* TMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CBC0F371EA7C26200454B8B /* TMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CBC0F591EA7C28700454B8B /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CBC0F581EA7C28700454B8B /* RealmSwift.framework */; };
+		3CBC0F5B1EA7C2A400454B8B /* TMDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC0F5A1EA7C2A400454B8B /* TMDatabase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		3CBC0F3D1EA7C26200454B8B /* TMDatabaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TMDatabaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CBC0F421EA7C26200454B8B /* TMDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDatabaseTests.swift; sourceTree = "<group>"; };
 		3CBC0F441EA7C26200454B8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CBC0F581EA7C28700454B8B /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = "../../../../Library/Developer/Xcode/DerivedData/TMTemplate-barfnvjvwrkgiygniwrkyarzlodh/Build/Products/Debug-iphonesimulator/RealmSwift.framework"; sourceTree = "<group>"; };
+		3CBC0F5A1EA7C2A400454B8B /* TMDatabase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDatabase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBC0F591EA7C28700454B8B /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,7 @@
 				3CBC0F361EA7C26200454B8B /* TMDatabase */,
 				3CBC0F411EA7C26200454B8B /* TMDatabaseTests */,
 				3CBC0F351EA7C26200454B8B /* Products */,
+				3CBC0F571EA7C28700454B8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,6 +79,7 @@
 			children = (
 				3CBC0F371EA7C26200454B8B /* TMDatabase.h */,
 				3CBC0F381EA7C26200454B8B /* Info.plist */,
+				3CBC0F5A1EA7C2A400454B8B /* TMDatabase.swift */,
 			);
 			path = TMDatabase;
 			sourceTree = "<group>";
@@ -84,6 +91,14 @@
 				3CBC0F441EA7C26200454B8B /* Info.plist */,
 			);
 			path = TMDatabaseTests;
+			sourceTree = "<group>";
+		};
+		3CBC0F571EA7C28700454B8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3CBC0F581EA7C28700454B8B /* RealmSwift.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +164,7 @@
 					3CBC0F331EA7C26200454B8B = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = L9NJSH4CZ8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					3CBC0F3C1EA7C26200454B8B = {
@@ -198,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CBC0F5B1EA7C2A400454B8B /* TMDatabase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +339,7 @@
 		3CBC0F491EA7C26200454B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L9NJSH4CZ8;
@@ -334,6 +352,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = org.yomstudio.TMDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +360,7 @@
 		3CBC0F4A1EA7C26200454B8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = L9NJSH4CZ8;
@@ -360,6 +380,7 @@
 		3CBC0F4C1EA7C26200454B8B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L9NJSH4CZ8;
 				INFOPLIST_FILE = TMDatabaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +393,7 @@
 		3CBC0F4D1EA7C26200454B8B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = L9NJSH4CZ8;
 				INFOPLIST_FILE = TMDatabaseTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +422,7 @@
 				3CBC0F4A1EA7C26200454B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3CBC0F4B1EA7C26200454B8B /* Build configuration list for PBXNativeTarget "TMDatabaseTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +431,7 @@
 				3CBC0F4D1EA7C26200454B8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
